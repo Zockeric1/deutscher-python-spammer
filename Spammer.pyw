@@ -31,54 +31,14 @@ while True:
             kp = easygui.msgbox(f'Bitte klicke bervor du den Spammer startest in die Zeile wo du {zh}mal "{te}" eingeben möchtest! Sobald du auf die Zeile geklickt hast und das Programm starten möchtest klicke bitte unten auf den Knopf "STARTEN".','Zuerst in die Zeile klicken!', 'STARTEN')
 
             if kp == "STARTEN":
-
-                if tete == "alphabet-klein-getrennt" or tete == "a-k-g":
-                    b = b.lower()
-                    if a == 1:
-                        for i in b:
-                            pyautogui.write(i)
-                            pyautogui.press("enter")
-                    elif a == 2:
-                        for i in b:
-                            pyautogui.write(i)
-
-                elif tete == "alphabet-groß-getrennt" or tete == "a-g-g":
-                    if a == 1:
-                        for i in b:
-                            pyautogui.write(i)
-                            pyautogui.press("enter")
-                    elif a == 2:
-                        for i in b:
-                            pyautogui.write(i)
-
-                elif tete == "alphabet-klein-zusammen" or tete == "a-k-z":
-                    b = b.lower()
-                    if a == 1:
-                        for i in range(zh):
-                            pyautogui.write(b)
-                            pyautogui.press("enter")
-                    elif a == 2:
-                        for i in range(zh):
-                            pyautogui.write(b)
-
-                elif tete == "alphabet-groß-zusammen" or tete == "a-g-z":
-                    if a == 1:
-                        for i in range(zh):
-                            pyautogui.write(b)
-                            pyautogui.press("enter")
-                    elif a == 2:
-                        for i in range(zh):
-                            pyautogui.write(b)
-
-                else:
-                    te = te.replace("ß", "ss")
-                    if a == 1:
-                        for i in range(zh):
-                            pyautogui.write(te)
-                            pyautogui.press("enter")
-                    elif a == 2:
-                        for i in range(zh):
-                            pyautogui.write(te)
+                te = te.replace("ß", "ss")
+                if a == 1:
+                    for i in range(zh):
+                        pyautogui.write(te)
+                        pyautogui.press("enter")
+                elif a == 2:
+                    for i in range(zh):
+                        pyautogui.write(te)
 
         root = tk.Tk()
         root.geometry("500x100")
