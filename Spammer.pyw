@@ -32,6 +32,9 @@ while True:
 
             if kp == "STARTEN":
                 te = te.replace("ß", "ss")
+                te = te.replace("ä", "ae")
+                te = te.replace("ö", "oe")
+                te = te.replace("ü", "ue")
                 if a == 1:
                     for i in range(zh):
                         pyautogui.write(te)
